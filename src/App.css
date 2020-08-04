@@ -1,42 +1,63 @@
-.App {
+@keyframes example{
+  from {background-color: rgb(18, 59, 9);}
+  to {background-color: rgb(109, 180, 68);}
+}
+ @keyframes example2{
+  from {background-color: rgb(109, 180, 68);}
+  to {background-color:  rgb(18, 59, 9);}
+ }
+
+*{
   text-align: center;
+  animation: example2 4s 3 alternate;
+  /* animation-duration: 4s;
+  animation-iteration-count: 3;
+  animation-direction: alternate; */
+  background-color: rgb(18, 59, 9)
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+#div{
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  width: 70%;
+  height: 200px;
+  animation: example2 4s 3 alternate;
+  /* animation-duration: 4s;
+  animation-iteration-count: 3;
+  animation-direction: alternate; */
+  padding: 50px;
+  border: 10px solid rgb(48, 116, 54);
+  margin-right: 5rem;
+  box-shadow: 12px 12px 2px 1px rgba(87, 199, 105, 0.199);
+
+}
+
+.paragraph{
+  color: rgb(35, 128, 15);
+  text-align: center;
+  font-family: cursive;
+  font-size: 2rem;
+  font-weight: 500;
+  font-variant: small-caps;
+  
+}
+
+.reset {
+    background-color: rgb(59, 97, 55);
+    color: rgb(104, 180, 98);
+    justify-content: center;
+    font-family: cursive;
+    size: 2rem;
+    border-radius: 2rem;
+    animation: example2 4s 3 alternate-reverse;
+    font-size: 15px;
+    transition-duration: 0.4s;
+
+}
+
+.reset:hover{
+  background-color: #4CAF50; 
   color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-div.reset{
-  color: aqua;
+  box-shadow: 5px 10px 20px 10px rgb(16, 75, 16)
 }

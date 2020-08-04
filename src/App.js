@@ -1,4 +1,5 @@
-import React, {Component} from 'react'
+import React, {Component} from 'react';
+import './App.css';
 
 class Ticker extends Component {
   constructor (){
@@ -21,8 +22,8 @@ class Ticker extends Component {
 }
 
   shouldComponentUpdate(nextProps,nextState){
-    if(nextState.count % 3 === 0 && !this.state.isPaused) return true
-    else if( nextState.count % 3 !== 0 && this.state.isPaused) return false
+    if(!this.state.isPaused) return true
+    else if(this.state.isPaused) return false
   }
 
   reset = () => {
@@ -48,11 +49,11 @@ class Ticker extends Component {
 
   render (){
     return (
-    <div>
+    <div id="div">
       
-      <p>The ticker is: {this.state.count}</p>
+      <p className="paragraph">The ticker is: {this.state.count}</p>
       <button onClick={this.reset} className="reset">Reset</button>
-    <button onClick={this.paused}>{this.state.isPaused ? "Ticker is paused": "Pause Ticker"}</button>
+    <button onClick={this.paused} className="reset">{this.state.isPaused ? "Ticker is paused": "Pause Ticker"}</button>
     </div>
     )
   }
